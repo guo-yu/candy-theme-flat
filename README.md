@@ -4,12 +4,13 @@ the default theme of candy
 
 ### Installation
 
-[![NPM](https://nodei.co/npm/candy-theme-flat.png)](https://nodei.co/npm/candy-theme-flat/) [![NPM](https://nodei.co/npm-dl/candy-theme-flat.png?months=6)](https://nodei.co/npm/candy-theme-flat/)
-
+```
+$ npm install candy-theme-flat
+```
 
 ### Example
 ````javascript
-var candy-theme-flat = require('candy-theme-flat');
+var flat = require('candy-theme-flat');
 ````
 
 ### API
