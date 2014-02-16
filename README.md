@@ -1,6 +1,6 @@
 ## candy-theme-flat ![npm](https://badge.fury.io/js/candy-theme-flat.png)
 
-the default theme of candy
+the default theme of candy and a very first demo of Project [Theme](http://github.com/turingou/theme)
 
 ### Installation
 
@@ -10,7 +10,14 @@ $ npm install candy-theme-flat
 
 ### Example
 ````javascript
-var flat = require('candy-theme-flat');
+// ensure candy-theme-flat was installed successfully.
+// then import theme module.
+var Theme = require('theme');
+var themes = new Theme;
+
+app.get('/theme/candy-theme-flat', function(req, res, next){
+    res.send(theme.render('candy-theme-flat/home', {...}));
+});
 ````
 
 ### API
