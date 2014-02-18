@@ -1,6 +1,7 @@
 {
   "name": "candy-theme-flat",
   "version": "0.0.1",
+  "view engine": "jade",
   "description": "the default theme of candy",
   "main": "index.js",
   "scripts": {

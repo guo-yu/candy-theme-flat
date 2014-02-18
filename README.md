@@ -15,7 +15,7 @@ $ npm install candy-theme-flat
 var Theme = require('theme');
 var themes = new Theme;
 
-app.get('/theme/candy-theme-flat', function(req, res, next){
+app.get('/home?theme=candy-theme-flat', function(req, res, next){
     res.send(theme.render('candy-theme-flat/home', {...}));
 });
 ````
