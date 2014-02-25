@@ -4,7 +4,6 @@
   "view engine": "jade",
   "static": "./static",
   "description": "the default theme of candy",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
