@@ -99,10 +99,10 @@ body {
   color: #444444;
 }
 a {
-  color: #3498db;
+  color: #2b2d39;
 }
 a:hover {
-  color: #005497;
+  color: #000000;
   text-decoration: none;
   -webkit-transition: color 0.25s linear, background-color 0.25s linear, border-color 0.25s linear;
   -moz-transition: color 0.25s linear, background-color 0.25s linear, border-color 0.25s linear;
@@ -125,20 +125,20 @@ a:hover {
   margin-bottom: 0px;
 }
 #header #logo h1 a.logo {
-  padding-top: 12px;
-  padding-bottom: 12px;
   display: block;
+  width: 150px;
+  height: 56px;
+  background: url('../images/logo.png') no-repeat 0 0;
+  text-indent: -9999em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: normal;
-  text-shadow: 1px 1px 2px #444;
   color: #444;
-  text-shadow: none;
   float: left;
 }
-#header #logo h1 a.logo span.desc {
-  font-size: 12px;
-  padding-left: 10px;
+#header .desc {
+  margin-top: 20px;
+  font-size: 14px;
   color: #444;
 }
 #header .user-nav {
@@ -165,7 +165,7 @@ a:hover {
   box-shadow: inset 0px 6px 8px #ddd;
 }
 #header .open-true i {
-  color: #3498db !important;
+  color: #2b2d39 !important;
 }
 #header .boards-dropdown {
   font-size: 18px;
@@ -213,11 +213,24 @@ a:hover {
   padding: 6px 12px;
 }
 #header .boards-index li a:hover {
-  background-color: #005497;
+  background-color: #000000;
   color: #fff;
 }
 #header .boards-index i {
   padding-right: 8px;
+}
+.search-bar {
+  margin-top: 10px;
+}
+.search-bar input {
+  border-radius: 0px;
+  padding: 3px 5px;
+  background-color: #efefef;
+  border: 0px;
+}
+.search-bar input:focus {
+  box-shadow: none;
+  border: 0px;
 }
 .active-nav {
   font-size: 14px !important;
@@ -340,12 +353,12 @@ a:hover {
 }
 .board-nav .nav-cnt ul li a:hover {
   background-color: #fff;
-  color: #005497;
+  color: #000000;
 }
 .banner {
   width: 100%;
   border-bottom: 1px solid #ddd;
-  background: #ffffff url('/images/wallpaper/geometry.png') left top;
+  background: #ffffff url('../images/bg.png') left top;
 }
 .banner .inner {
   padding: 10px 0;
@@ -509,7 +522,7 @@ a:hover {
 }
 .push-new-post a {
   display: block;
-  background-color: #3498db;
+  background-color: #2b2d39;
   color: #fff;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -519,7 +532,7 @@ a:hover {
 }
 .push-new-post a:hover {
   box-shadow: 0px 1px 3px #ddd;
-  background-color: #005497;
+  background-color: #000000;
 }
 /* pager */
 .pager {
@@ -538,11 +551,11 @@ a:hover {
   margin-right: -1px;
 }
 .pager li a:hover {
-  background-color: #3498db;
+  background-color: #2b2d39;
   color: #fff;
 }
 .pager.current-page {
-  background-color: #3498db;
+  background-color: #2b2d39;
   color: #fff;
 }
 /* Footer */
@@ -559,11 +572,12 @@ a:hover {
   color: #000;
 }
 #footer .copyright .candy {
-  padding-left: 13px;
-  background: url('/images/candy.png') no-repeat left center;
-}
-#footer .copyright .powered {
-  text-align: right;
+  display: inline-block;
+  width: 45px;
+  overflow: hidden;
+  background: url('../images/candy-mini.png') no-repeat center bottom;
+  text-indent: -9999em;
+  margin-top: -10px;
 }
 /*page*/
 .page {
@@ -634,7 +648,7 @@ a:hover {
 }
 .comments-wrap .form-submit {
   border: 1px solid #ddd;
-  background-color: #3498db;
+  background-color: #2b2d39;
   padding: 3px 15px;
   margin-top: 5px;
   margin-bottom: 15px;
@@ -792,7 +806,7 @@ a:hover {
 }
 .side-cnt .single-pub h4 a i.icon-chevron-right,
 .mime-block .single-pub h4 a i.icon-chevron-right {
-  color: #3498db;
+  color: #2b2d39;
 }
 .side-cnt .single-pub span,
 .mime-block .single-pub span {
@@ -874,7 +888,7 @@ a:hover {
 .search {
   margin-bottom: 15px;
   margin-top: 15px;
-  background-color: #3498db;
+  background-color: #2b2d39;
   overflow: hidden;
   border-radius: 4px;
   -moz-border-radius: 4px;

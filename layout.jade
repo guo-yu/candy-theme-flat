@@ -10,28 +10,25 @@ html(ng-app="candy")
     title 
         block title
             |#{site.name}
-    link(rel='shortcut icon',type="image/x-icon",href="/images/favicon.ico")
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/duoshuo.css')
+    link(rel='shortcut icon',type="image/x-icon",href="#{static}/images/favicon.ico")
+    link(rel='stylesheet', href='#{static}/stylesheets/style.css')
+    link(rel='stylesheet', href='#{static}/stylesheets/duoshuo.css')
     block css
   body
     block header
-        #header(ng-controller="boards")
+        #header
             #ihd.container.clearfix
                 .row
                     .col-lg-2
                         #logo.clearfix.fn-left
                             h1.clearfix
                                 a(href="/").logo #{site.name}
-                                    span.desc #{site.desc}
-                                //- a(ng-click="list()",href="#boards",ng-class="'open-' + open").boards-dropdown
-                                    i(ng-class="arrow")
-                    .col-lg-7
-                        |boards here
-                    .col-lg-3
-                        .search-bar.clearfix
-                            form(action="/search",method="POST")
-                                input(type="text",name="search",id="search")
+                    .col-lg-10
+                        .desc #{site.desc}
+                    //- .col-lg-3
+                    //-     .search-bar.clearfix
+                    //-         form(action="/search",method="POST")
+                    //-             input(type="text",name="search",id="search").form-control
     block banner
         include banner
     #cnt
@@ -46,18 +43,19 @@ html(ng-app="candy")
     block footer
         #footer.footer
             #ft.clearfix
-                #ift.container.clearfix.copyright &copy; #{new Date().getFullYear()} #{site.name} #{site.desc}. Powered by 
-                    a(href="https://github.com/turingou/candy",title="npm install candy").candy #{sys.name} 
-                    |@ #{sys.version}
+                #ift.container.clearfix.copyright &copy; #{new Date().getFullYear()} #{site.name} #{site.desc}. 
+                    .poweredby.pull-right Powered by 
+                        a(href="https://github.com/turingou/candy",title="npm install candy").candy #{sys.name} 
+                        |v#{sys.version}
 
     //- libs
-    script(src="/javascripts/lib/jquery-1.10.2.min.js")
-    script(src="/javascripts/lib/bootstrap.min.js")
-    script(src="/javascripts/lib/angular.min.js")
-    script(src="/javascripts/lib/angular-resource.min.js")
+    script(src="#{static}/javascripts/lib/jquery-1.10.2.min.js")
+    script(src="#{static}/javascripts/lib/bootstrap.min.js")
+    script(src="#{static}/javascripts/lib/angular.min.js")
+    script(src="#{static}/javascripts/lib/angular-resource.min.js")
     //- angular app
-    script(src="/javascripts/store.js")
-    script(src="/javascripts/candy.js")
+    script(src="#{static}/javascripts/store.js")
+    script(src="#{static}/javascripts/candy.js")
     //- duoshuo comments configs
     script.
         var duoshuoQuery = {
