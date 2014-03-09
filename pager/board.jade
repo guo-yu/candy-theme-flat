@@ -2,7 +2,7 @@
     ul#pager.pagination.clearfix
         - if (page.current != 1)
             li.previous
-                a(href="/board/#{board.name}/page/#{page.current - 1}",title="上一页")
+                a(href="/board/#{board.url}/page/#{page.current - 1}",title="上一页")
                     i.icon-chevron-left
         - else
             li.previous.disabled
@@ -12,7 +12,7 @@
             span #{page.current}/#{page.max}
         - if (page.current != page.max)
             li.next
-                a(href="/board/#{board.name}/page/#{page.current + 1}",title="下一页")
+                a(href="/board/#{board.url}/page/#{page.current + 1}",title="下一页")
                     i.icon-chevron-right
         - else
             li.next.disabled
