@@ -26,7 +26,13 @@ block banner
 
 block content
     .board.clearfix
-        - if (threads && threads.length > 0)
+        - if (threads && threads.length <= 0)
+            h4.no
+                i.icon-ban-circle
+                | 这个讨论区还没有人来过，想 
+                a(href="/thread/new?bid=#{board.id}") 说点什么 
+                | 吗？
+        - else
             - each thread in threads
                 .threads
                     .thread.clearfix
@@ -49,10 +55,4 @@ block content
                                 .comments-count.clearfix
                                     i.icon-comment
                                     a.ds-thread-count(href="/thread/#{thread.id}#comments",data-thread-key="#{thread.id}",data-count-type="comments") 加载中...
-            include ../pager
-        - else 
-            h4.no
-                i.icon-ban-circle
-                | 这个讨论区还没有人来过，想 
-                a(href="/thread/new?bid=#{board.id}") 说点什么 
-                | 吗？
+            include ../pager/board

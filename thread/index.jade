@@ -3,10 +3,10 @@ extends ../layout
 block meta
     meta(name="keywords",content="#{thread.name},#{site.name}")
     meta(name="description",content="#{thread.content.substr(0,16)}")
-    link(rel='stylesheet',href="/stylesheets/github.css")
+    link(rel='stylesheet',href="#{static}/stylesheets/github.css")
 
 block css
-    link(rel='stylesheet', href='/stylesheets/thread.css')
+    link(rel='stylesheet', href='#{static}/stylesheets/thread.css')
 
 block title
     | #{thread.name}  

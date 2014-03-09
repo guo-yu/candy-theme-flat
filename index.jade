@@ -5,7 +5,13 @@ block css
 
 block content
      .board.clearfix
-        - if (threads.length > 0)
+        - if (threads.length <= 0)
+            h4.no
+                i.icon-star
+                | #{site.name} 好像是个刚创建的论坛， 想成为 
+                a(href="/thread/new") 第一个发言 
+                | 的人吗？
+        - else
             - each thread in threads
                 .threads
                     .thread.clearfix
@@ -28,10 +34,4 @@ block content
                                 .comments-count.clearfix
                                     i.icon-comment
                                     a.ds-thread-count(href="/thread/#{thread.id}#comments",data-thread-key="#{thread.id}",data-count-type="comments") 加载中...
-                            
-        - else
-            h4.no
-                i.icon-star
-                | #{site.name} 好像是个刚创建的论坛， 想成为 
-                a(href="/thread/new") 第一个发言 
-                | 的人吗？
+            include pager/index
