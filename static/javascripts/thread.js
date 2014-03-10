@@ -83,19 +83,20 @@ candy.controller('threadEditor', function($scope, Store) {
             }
         })
     };
-    $scope.pin = function(id, level) {
+    $scope.pin = function(id, level, turn) {
         Store.thread.put({
+            pin: true,
             id: $scope.thread.id,
-            pined: true,
+            pined: turn,
             level: level || 0
         }, function(result) {
             if (result.stat == 'ok') {
-                alert('话题置顶成功');
-                window.location = '/thread/' + $scope.thread.id;
-            } else {
-                alert('出现错误，请查看控制台');
-                console.log(result.error)
+                alert('修改话题置顶成功');
+                window.location.reload();
+                return false;
             }
+            alert('出现错误，请查看控制台');
+            console.log(result.error)
         })
     }
     uploader('#fileupload', $scope.thread);

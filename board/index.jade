@@ -36,6 +36,8 @@ block content
             .threads
                 - each thread in threads
                     - var pined = thread.pined
+                    - var username = thread.lz.nickname ? thread.lz.nickname : thread.lz.duoshuo.user_id
+                    - var title = thread.name.length >= 78 ? thread.name.substr(0, 78) : thread.name
                     .thread.clearfix(class="#{pined ? 'pined' : 'normal'}")
                         .row
                             .col-lg-10
@@ -43,19 +45,20 @@ block content
                                     a(href="/member/#{thread.lz.id}")
                                         img(src="#{thread.lz.avatar}")
                                 h4.title
-                                    a(href="/thread/#{thread.id}") #{thread.name}
-                                .meta.clearfix
-                                    span.name 
-                                        a(href="/member/#{thread.lz.id}") #{thread.lz.nickname ? thread.lz.nickname : thread.lz.duoshuo.user_id}
-                                    span.cat
-                                        i.icon-chevron-right
-                                        a(href="/board/#{thread.board.url}") #{thread.board.name}
-                                    i.icon-time
-                                    != moment(thread.pubdate).fromNow()
-                                    - if (pined)
-                                        span.pined-label
-                                            i.icon-chevron-up
-                                            |置顶
+                                    a(href="/thread/#{thread.id}")
+                                        - if (pined)
+                                            span.pined-label
+                                                i.icon-chevron-up
+                                                | 置顶
+                                        | #{title}
+                                    span.pubtime
+                                        i.icon-time
+                                        != moment(thread.pubdate).fromNow()
+                                    - if (!pined)
+                                        span.name
+                                            a(href="/member/#{thread.lz.id}") #{username} /
+                                        span.cat
+                                            a(href="/board/#{thread.board.url}") #{thread.board.name}
                             .col-lg-2.pull-right
                                 .comments-count.clearfix
                                     i.icon-comment
