@@ -1312,3 +1312,24 @@ h3.syncing {
 #cnt {
   padding-top: 20px;
 }
+.admin-options {
+  margin-bottom: 20px;
+  padding: 0px;
+}
+.admin-options a {
+  display: block;
+  font-size: 12px;
+  text-align: left;
+  border-radius: 0px;
+}
+.admin-options a:hover {
+  background-color: #f5f5f5;
+}
+.admin-options .global-pin i {
+  color: #E74C3C;
+}
+.admin-options i {
+  padding-right: 10px;
+  padding-left: 4px;
+  color: #2980B9;
+}

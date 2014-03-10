@@ -49,6 +49,14 @@ block main
               a(href="javascript:void(0);",ng-click="remove('#{thread._id}')").remove.btn
                 i.icon-remove
                 | 删除此帖
+          - if (user.type == 'admin')
+            .admin-options.side-cnt.clearfix
+              a(href="javascript:void(0);",ng-click="pin('#{thread._id}', 1)").pin.btn
+                i.icon-chevron-up
+                | #{thread.pined && thread.level === 1 ? '取消板块置顶': '板块置顶'}
+              a(href="javascript:void(0);",ng-click="pin('#{thread._id}')").pin.btn.global-pin
+                i.icon-chevron-up
+                | #{thread.pined && thread.level === 0 ? '取消全局置顶': '全局置顶'}
           include ../signin
 
 block js

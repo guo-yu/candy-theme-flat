@@ -4,12 +4,11 @@
 }
 .threads .thread {
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
   position: relative;
 }
 .threads .thread .avatar {
   float: left;
-  margin: 5px 15px 5px 0px;
+  margin: 0px 15px 0px 0px;
   width: 45px;
   height: 45px;
 }
@@ -21,11 +20,11 @@
   width: 100%;
 }
 .threads .thread h4.title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   margin-bottom: 8px;
   line-height: 1.4;
-  margin-top: 3px;
+  margin-top: 13px;
 }
 .threads .thread h4.title a {
   color: #444;
@@ -33,46 +32,45 @@
 .threads .thread h4.title a:hover {
   color: #999;
 }
-.threads .thread .meta {
-  color: #999;
-  font-size: 12px;
-  padding-left: 60px;
-}
-.threads .thread .meta a {
-  color: #999;
-}
-.threads .thread .meta span {
+.threads .thread h4.title span {
   padding: 2px 5px 3px;
   margin-right: 10px;
   background-color: #efefef;
   color: #999;
+  font-size: 12px !important;
 }
-.threads .thread .meta .edit {
+.threads .thread h4.title span a {
+  color: #999;
+}
+.threads .thread .edit {
   background-color: #efefef;
   padding: 2px 8px;
   margin-left: 10px;
 }
-.threads .thread .meta .edit:hover {
+.threads .thread .edit:hover {
   background-color: #444;
   color: #fff;
 }
-.threads .thread .meta .name {
+.threads .thread .name {
   padding-right: 10px;
   background-color: #95A5A6;
 }
-.threads .thread .meta .name a {
+.threads .thread .name a {
   color: #fff;
 }
-.threads .thread .meta .cat {
+.threads .thread .cat {
   margin-left: -15px;
   background-color: #efefef;
   color: #999;
 }
-.threads .thread .meta .cat i {
+.threads .thread .cat i {
   padding-right: 4px;
 }
+.threads .thread .pubtime {
+  margin-left: 20px;
+  font-weight: normal;
+}
 .threads .thread .comments-count {
-  margin-top: 8px;
   color: #444;
   padding: 12px 12px;
   border-radius: 12px;
@@ -86,6 +84,26 @@
 .threads .thread .comments-count a {
   color: #999;
   border-radius: 4px;
+}
+.threads .thread.pined {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  padding: 0px;
+}
+.threads .thread.pined h4.title {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.threads .thread .pined-label {
+  background-color: #34495E !important;
+  color: #fff !important;
+  margin-right: 10px;
+  font-size: 12px;
+  padding: 3px 8px;
+  font-weight: normal;
 }
 .single-thread .contents {
   border-left: 1px solid #ddd;

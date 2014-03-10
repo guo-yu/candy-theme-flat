@@ -33,9 +33,10 @@ block content
                 a(href="/thread/new?bid=#{board.id}") 说点什么 
                 | 吗？
         - else
-            - each thread in threads
-                .threads
-                    .thread.clearfix
+            .threads
+                - each thread in threads
+                    - var pined = thread.pined
+                    .thread.clearfix(class="#{pined ? 'pined' : 'normal'}")
                         .row
                             .col-lg-10
                                 .avatar
@@ -51,6 +52,10 @@ block content
                                         a(href="/board/#{thread.board.url}") #{thread.board.name}
                                     i.icon-time
                                     != moment(thread.pubdate).fromNow()
+                                    - if (pined)
+                                        span.pined-label
+                                            i.icon-chevron-up
+                                            |置顶
                             .col-lg-2.pull-right
                                 .comments-count.clearfix
                                     i.icon-comment

@@ -8,11 +8,10 @@
     background-color: #fff;
     .thread {
         border-bottom: 1px solid #ddd;
-        padding: 10px 0;
         position: relative;
         .avatar {
             float: left;
-            margin: 5px 15px 5px 0px;
+            margin: 0px 15px 0px 0px;
             width: 45px;
             height: 45px;
             img {
@@ -24,58 +23,58 @@
             }
         }
         h4.title {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: normal;
             margin-bottom: 8px;
             line-height: 1.4;
-            margin-top: 3px;
+            margin-top: 13px;
             a {
                 color: #444;
                 &:hover {
                     color: #999;
                 }
             }
-        }
-        .meta {
-            color: #999;
-            font-size: 12px;
-            padding-left: 60px;
-            a {
-                color : #999;
-            }
             span {
+                color: #999;
                 padding: 2px 5px 3px;
                 margin-right: 10px;
                 background-color: #efefef;
                 color: #999;
-            }
-            .edit {
-                background-color: #efefef;
-                padding: 2px 8px;
-                margin-left: 10px;
-                &:hover {
-                    background-color: #444;
-                    color: #fff;
-                };
-            }
-            .name {
-                padding-right: 10px;
-                background-color: #95A5A6;
+                font-size: 12px !important;
                 a {
-                    color: #fff;
-                }
-            }
-            .cat {
-                margin-left: -15px;
-                background-color: #efefef;
-                color: #999;
-                i {
-                    padding-right: 4px;
+                    color : #999;
                 }
             }
         }
+        .edit {
+            background-color: #efefef;
+            padding: 2px 8px;
+            margin-left: 10px;
+            &:hover {
+                background-color: #444;
+                color: #fff;
+            };
+        }
+        .name {
+            padding-right: 10px;
+            background-color: #95A5A6;
+            a {
+                color: #fff;
+            }
+        }
+        .cat {
+            margin-left: -15px;
+            background-color: #efefef;
+            color: #999;
+            i {
+                padding-right: 4px;
+            }
+        }
+        .pubtime {
+            margin-left: 20px;
+            font-weight: normal;
+        }
         .comments-count {
-            margin-top: 8px;
             color: #444;
             padding: 12px 12px;
             border-radius: 12px;
@@ -89,6 +88,26 @@
                 color: #999;
                 border-radius: 4px;
             }
+        }
+        &.pined {
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            padding: 0px;
+            h4.title {
+                margin-top: 12px;
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 0px;
+            }
+        }
+        .pined-label {
+            background-color: #34495E !important;
+            color: #fff !important;
+            margin-right: 10px;
+            font-size: 12px;
+            padding: 3px 8px;
+            font-weight: normal;
         }
     }
 }

@@ -83,6 +83,21 @@ candy.controller('threadEditor', function($scope, Store) {
             }
         })
     };
+    $scope.pin = function(id, level) {
+        Store.thread.put({
+            id: $scope.thread.id,
+            pined: true,
+            level: level || 0
+        }, function(result) {
+            if (result.stat == 'ok') {
+                alert('话题置顶成功');
+                window.location = '/thread/' + $scope.thread.id;
+            } else {
+                alert('出现错误，请查看控制台');
+                console.log(result.error)
+            }
+        })
+    }
     uploader('#fileupload', $scope.thread);
 });
 
