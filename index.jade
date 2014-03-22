@@ -1,45 +1,45 @@
 extends layout
 
 block css
-    link(rel='stylesheet', href='#{static}/stylesheets/thread.css')
+  link(rel='stylesheet', href='#{static}/stylesheets/thread.css')
 
 block content
-     .board.clearfix
-        - if (threads.length <= 0)
-            h4.no
-                i.icon-star
-                | #{site.name} 好像是个刚创建的论坛， 想成为 
-                a(href="/thread/new") 第一个发言 
-                | 的人吗？
-        - else
-            .threads
-                - each thread in threads
-                    - var pined = thread.pined
-                    - var username = thread.lz.nickname ? thread.lz.nickname : thread.lz.duoshuo.user_id
-                    - var title = thread.name.length >= 78 ? thread.name.substr(0, 78) : thread.name
-                    .thread.clearfix(class="#{pined ? 'pined' : 'normal'}")
-                        .row
-                            .col-lg-10
-                                .avatar
-                                    a(href="/member/#{thread.lz.id}")
-                                        img(src="#{thread.lz.avatar}")
-                                h4.title
-                                    a(href="/thread/#{thread.id}")
-                                        - if (pined)
-                                            span.pined-label
-                                                i.icon-chevron-up
-                                                | 置顶
-                                        | #{title}
-                                    span.pubtime
-                                        i.icon-time
-                                        != moment(thread.pubdate).fromNow()
-                                    - if (!pined)
-                                        span.name
-                                            a(href="/member/#{thread.lz.id}") #{username} /
-                                        span.cat
-                                            a(href="/board/#{thread.board.url}") #{thread.board.name}
-                            .col-lg-2.pull-right
-                                .comments-count.clearfix
-                                    i.icon-comment
-                                    a.ds-thread-count(href="/thread/#{thread.id}#comments",data-thread-key="#{thread.id}",data-count-type="comments") 加载中...
-            include pager/index
+  .board.clearfix
+    - if (threads.length <= 0)
+      h4.no
+        i.icon-star
+        | #{site.name} 好像是个刚创建的论坛， 想成为 
+        a(href="/thread/new") 第一个发言 
+        | 的人吗？
+    - else
+      .threads
+        - each thread in threads
+          - var pined = thread.pined
+          - var username = thread.lz.nickname ? thread.lz.nickname : thread.lz.duoshuo.user_id
+          - var title = thread.name.length >= 78 ? thread.name.substr(0, 78) : thread.name
+          .thread.clearfix(class="#{pined ? 'pined' : 'normal'}")
+            .row
+              .col-lg-10
+                .avatar
+                  a(href="/member/#{thread.lz.id}")
+                    img(src="#{thread.lz.avatar}")
+                h4.title
+                  a(href="/thread/#{thread.id}")
+                    - if (pined)
+                      span.pined-label
+                        i.icon-chevron-up
+                        | 置顶
+                    | #{title}
+                  span.pubtime
+                    i.icon-time
+                    != moment(thread.pubdate).fromNow()
+                  - if (!pined)
+                    span.name
+                      a(href="/member/#{thread.lz.id}") #{username} /
+                    span.cat
+                      a(href="/board/#{thread.board.url}") #{thread.board.name}
+              .col-lg-2.pull-right
+                  .comments-count.clearfix
+                    i.icon-comment
+                    a.ds-thread-count(href="/thread/#{thread.id}#comments",data-thread-key="#{thread.id}",data-count-type="comments") 加载中...
+      include pager/index
