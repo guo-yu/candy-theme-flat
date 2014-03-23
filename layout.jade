@@ -16,13 +16,13 @@ html(ng-app="candy")
     block css
   body
     block header
-      #header
-        #ihd.container.clearfix
+      #header.header
+        #header-inner.header-inner.container.clearfix
           .row
             .col-lg-2
-              #logo.clearfix.fn-left
+              #logo.logo.clearfix.fn-left
                 h1.clearfix
-                  a(href="/").logo #{site.name}
+                  a(href="/") #{site.name}
             .col-lg-10
               .desc #{site.desc}
         //- .col-lg-3
@@ -31,22 +31,21 @@ html(ng-app="candy")
         //-             input(type="text",name="search",id="search").form-control
     block banner
       include banner
-    #cnt
-      #icnt.container.clearfix
+    #content.content
+      #content-inner.content-inner.container.clearfix
         .row
           block main
-            .col-lg-9
+            .col-lg-9.main-content
               block content
             .col-lg-3.sidebar
               block sidebar
                 include sidebar
     block footer
       #footer.footer
-        #ft.clearfix
-          #ift.container.clearfix.copyright &copy; #{new Date().getFullYear()} #{site.name} #{site.desc}. 
-            .poweredby.pull-right Powered by 
-              a(href="https://github.com/turingou/candy",title="npm install candy").candy #{sys.name} 
-              |v#{sys.version}
+        #footer-inner.footer-inner.container.clearfix.copyright &copy; #{new Date().getFullYear()} #{site.name} #{site.desc}. 
+          .poweredby.pull-right Powered by 
+            a(href="https://github.com/turingou/candy",title="npm install candy").candy #{sys.name} 
+            |v#{sys.version}
 
     //- libs
     script(src="#{static}/javascripts/lib/jquery-1.10.2.min.js")
