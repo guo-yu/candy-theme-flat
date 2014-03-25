@@ -3,6 +3,9 @@ extends ../layout
 block title
   | 添加话题
 
+block css
+  link(href="#{static}/stylesheets/libs/editor/editor.css",rel="stylesheet")
+
 block banner
   .banner.clearfix
     .banner-inner.clearfix.container
@@ -52,7 +55,6 @@ block main
 block js
   - if (board)
     //- editor
-    link(href="#{static}/stylesheets/editor/editor.css",rel="stylesheet")
     script(src="#{static}/javascripts/lib/editor.js")
     //- uploader
     link(href="#{static}/stylesheets/jquery.fileupload-ui.css",rel="stylesheet")
