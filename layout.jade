@@ -26,7 +26,8 @@ html(ng-app="candy")
                 h1.clearfix
                   a(href="/") #{site.name}
             .col-lg-7
-              .desc #{site.desc}
+              .boards-nav
+                a(href="javascript:void(0);") #{site.desc}
             .col-lg-3
               .search-bar.clearfix
                 form(action="/",method="POST").clearfix

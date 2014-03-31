@@ -7,8 +7,9 @@
 .threads {
     background-color: #fff;
     .thread {
-        border-bottom: 1px solid #ddd;
+        border: 1px solid #ddd;
         position: relative;
+        margin-top: -1px;
         .avatar {
             float: left;
             margin: 0px 15px 0px 0px;
@@ -37,12 +38,20 @@
             span {
                 color: #999;
                 padding: 2px 5px 3px;
+                border-radius: 2px;
                 margin-right: 10px;
                 background-color: #efefef;
                 color: #999;
                 font-size: 12px !important;
                 a {
                     color : #999;
+                }
+                &.attachements {
+                    background-color: #444;
+                    color: #fff;
+                    i {
+                        padding-right: 0px;
+                    }
                 }
             }
         }

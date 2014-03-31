@@ -3,11 +3,11 @@
     .row
       .col-lg-4
         .sign.clearfix
-          |欢迎回来，
           - if (!user)
-            a(href="/sign") 请登录 #{site.name}
+            a(href="/sign") 你好，请登录 #{site.name}
           - if (user)
-            span.nickname #{user.nickname ? user.nickname : user.duoshuo.user_id}
+            img(src="#{user.avatar}").mini-avatar
+            span.nickname 欢迎回来，#{user.nickname ? user.nickname : user.duoshuo.user_id}
       .col-lg-8
         - if (user)
           ul.nav-dashboard.clearfix

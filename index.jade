@@ -17,6 +17,7 @@ block content
           - var pined = thread.pined
           - var username = thread.lz.nickname ? thread.lz.nickname : thread.lz.duoshuo.user_id
           - var title = thread.name.length >= 78 ? thread.name.substr(0, 78) : thread.name
+          - var attachements = thread.media && thread.media.length > 0
           .thread.clearfix(class="#{pined ? 'pined' : 'normal'}")
             .row
               .col-lg-10
@@ -38,6 +39,9 @@ block content
                       a(href="/member/#{thread.lz.id}") #{username} /
                     span.cat
                       a(href="/board/#{thread.board.url}") #{thread.board.name}
+                  - if (attachements)
+                    span.attachements
+                      i.fa.fa-paperclip
               .col-lg-2.pull-right
                   .comments-count.clearfix
                     i.fa.fa-comment-o
