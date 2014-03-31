@@ -7,7 +7,7 @@ block content
   .board.clearfix
     - if (threads.length <= 0)
       h4.no
-        i.icon-star
+        i.fa.fa-star-o
         | #{site.name} 好像是个刚创建的论坛， 想成为 
         a(href="/thread/new") 第一个发言 
         | 的人吗？
@@ -27,11 +27,11 @@ block content
                   a(href="/thread/#{thread.id}")
                     - if (pined)
                       span.pined-label
-                        i.icon-chevron-up
+                        i.fa.fa-arrow-circle-o-up
                         | 置顶
                     | #{title}
                   span.pubtime
-                    i.icon-time
+                    i.fa.fa-clock-o
                     != moment(thread.pubdate).fromNow()
                   - if (!pined)
                     span.name
@@ -40,6 +40,6 @@ block content
                       a(href="/board/#{thread.board.url}") #{thread.board.name}
               .col-lg-2.pull-right
                   .comments-count.clearfix
-                    i.icon-comment
+                    i.fa.fa-comment-o
                     a.ds-thread-count(href="/thread/#{thread.id}#comments",data-thread-key="#{thread.id}",data-count-type="comments") 加载中...
       include pager/index

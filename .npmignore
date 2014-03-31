@@ -4,3 +4,6 @@ node_modules
 psd
 thumb
 *.log
+candy-*.png
+static/stylesheets/style.css
+static/stylesheets/thread.css

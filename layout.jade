@@ -15,6 +15,8 @@ html(ng-app="candy")
     link(rel='stylesheet', href='#{static}/stylesheets/libs/duoshuo.css')
     block css
   body
+    block nav
+      include nav
     block header
       #header.header
         #header-inner.header-inner.container.clearfix
@@ -23,12 +25,15 @@ html(ng-app="candy")
               #logo.logo.clearfix.fn-left
                 h1.clearfix
                   a(href="/") #{site.name}
-            .col-lg-10
+            .col-lg-7
               .desc #{site.desc}
-        //- .col-lg-3
-        //-     .search-bar.clearfix
-        //-         form(action="/search",method="POST")
-        //-             input(type="text",name="search",id="search").form-control
+            .col-lg-3
+              .search-bar.clearfix
+                form(action="/",method="POST").clearfix
+                  .input-group
+                    span.input-group-addon
+                      i.fa.fa-search
+                    input(type="text",name="search",id="search",placeholder="搜索讨论节点或话题...").form-control
     block banner
       include banner
     #content.content
