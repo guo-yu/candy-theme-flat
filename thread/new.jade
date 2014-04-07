@@ -51,7 +51,8 @@ block main
               a(href="javascript:void(0);",ng-click="create()").btn.btn-success.submit
                 i.icon-ok 
                 | 写好了
-          include ../signin
+          include ../widgets/ds-top-threads
+          include ../widgets/ds-recent-comments
 
 block js
   - if (board)

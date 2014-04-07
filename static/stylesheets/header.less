@@ -118,3 +118,63 @@
     }
   }
 }
+
+.dashboards {
+  margin-top: 12px;
+  .nav-dashboard {
+    list-style-type: none;
+    float: right;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    float: left;
+    .mime-avatar {
+      a {
+        padding: 0px;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+    .mini-avatar {
+      width: 30px;
+      height: 30px;
+    }
+    li {
+      float: left;
+      margin-right: 1px;
+      font-size: 12px;
+      height: 30px;
+      text-align: center;
+      a {
+        color: #444;
+        display: block;
+        text-align: center;
+        background-color: #f5f5f5;
+        padding: 0px 10px;
+        &:hover {
+          color: #fff;
+          background-color: #444;
+        }
+        &.publish-btn {
+          background-color: #2980B9;
+          color: #fff;
+          &:hover {
+            background-color: #2980B9 - #444;
+          }
+        }
+      }
+      i {
+        font-size: 14px;
+        line-height: 30px;
+        padding-right: 5px;
+      }
+    }
+  }
+  .top-sign {
+    float: right;
+    .ds-login .ds-icons-32 a {
+      margin: 0px 6px 0px 0px !important;
+    }
+  }
+}

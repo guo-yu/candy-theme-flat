@@ -4,7 +4,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-quote, .icon-unordered-list, .icon-ordered-list, .icon-image, .icon-play, .icon-music, .icon-contract, .icon-fullscreen, .icon-question, .icon-info, .icon-undo, .icon-redo, .icon-code, .icon-preview {
+.icon-quote, .icon-bold, .icon-italic, .icon-link, .icon-undo, .icon-unordered-list, .icon-ordered-list, .icon-image, .icon-play, .icon-music, .icon-contract, .icon-fullscreen, .icon-question, .icon-info, .icon-undo, .icon-redo, .icon-code, .icon-preview {
     font-family: 'FontAwesome';
     speak: none;
     font-style: normal;
@@ -13,6 +13,18 @@ you can use the generic selector below, but it's slower:
     text-transform: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
+}
+.icon-undo:before {
+  content:"\f0e2";
+}
+.icon-link:before {
+    content:"\f0c1"
+}
+.icon-bold:before {
+    content:"\f032";
+}
+.icon-italic:before {
+    content:"\f033";
 }
 .icon-quote:before {
     content:"\f10d";

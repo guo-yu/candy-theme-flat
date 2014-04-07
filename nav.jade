@@ -17,17 +17,17 @@
                   i.fa.fa-gear
                   | 管理后台
             li
-              a(href="/member/#{user._id}")
-                i.fa.fa-home
-                | 我的 #{site.name}
-            li
               a(href="/thread/new")
                 i.fa.fa-plus
                 | 发表新话题
+            li
+              a(href="/member/#{user._id}")
+                i.fa.fa-home
+                | 我的 #{site.name}
             li
               a(href="http://#{site.duoshuo.short_name}.duoshuo.com/logout/?sso=1&redirect_uri=#{url}/signout").signout 
                 i.fa.fa-power-off
                 | 登出
         - else
           .top-sign.clearfix
-            .ds-login.clearfix
+            .ds-login.ds-login-16.clearfix
