@@ -18,23 +18,7 @@ html(ng-app="candy")
     block nav
       include nav
     block header
-      #header.header
-        #header-inner.header-inner.container.clearfix
-          .row
-            .col-lg-2
-              #logo.logo.clearfix.fn-left
-                h1.clearfix
-                  a(href="/") #{site.name}
-            .col-lg-7
-              .boards-nav
-                a(href="javascript:void(0);") #{site.desc}
-            .col-lg-3
-              .search-bar.clearfix
-                form(action="/",method="POST").clearfix
-                  .input-group
-                    span.input-group-addon
-                      i.fa.fa-search
-                    input(type="text",name="search",id="search",placeholder="搜索讨论节点或话题...").form-control
+      include header
     block banner
       include banner
     #content.content

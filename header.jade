@@ -1,0 +1,20 @@
+#header.header
+  #header-inner.header-inner.container.clearfix
+    .row
+      .col-lg-9
+        #logo.logo.clearfix.fn-left
+          h1.clearfix
+            a(href="/") #{site.name}
+        #boards-nav.boards-nav.clearfix.fn-left(ng-controller="boardsNav")
+          a.dropdown-trigger(href="javascript:void(0);",ng-click="list()") #{site.desc}
+            span.icon 
+              i.fa.fa-chevron-down
+          ul.sub-menu.clearfix(ng-hide="!status.show")
+            li(ng-repeat="board in boards"): a(ng-href="/board/{{board.url}}",ng-bind="board.name")
+        #search-bar.search-bar.clearfix(ng-controller="search")
+          form(action="/",method="POST").clearfix
+            .input-group
+              span.input-group-addon
+                i.fa.fa-search
+              input(type="text",name="search",id="search",placeholder="在 #{site.name} 中搜索某个讨论节点或者话题 ......").form-control
+      .col-lg-3
