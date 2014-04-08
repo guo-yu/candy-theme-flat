@@ -3,18 +3,18 @@
     - if (page.current != 1)
       li.previous
         a(href="/board/#{board.url}/page/#{page.current - 1}",title="上一页")
-          i.icon-chevron-left
+          i.fa.fa-chevron-left
     - else
       li.previous.disabled
         a(href="#")
-          i.icon-chevron-left        
+          i.fa.fa-chevron-left        
     li.current
       span #{page.current}/#{page.max}
     - if (page.current != page.max)
       li.next
         a(href="/board/#{board.url}/page/#{page.current + 1}",title="下一页")
-          i.icon-chevron-right
+          i.fa.fa-chevron-right
     - else
       li.next.disabled
         a(href="#")
-          i.icon-chevron-right
+          i.fa.fa-chevron-right

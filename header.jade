@@ -1,3 +1,5 @@
+- var publink = (board && board.id) ? ('new?bid=' + board.id) : 'new'
+
 #header.header
   #header-inner.header-inner.container.clearfix
     .row
@@ -25,7 +27,7 @@
                 a(href="/member/#{user._id}")
                   img(src="#{user.avatar}").mini-avatar
               li
-                a(href="/thread/new").publish-btn
+                a(href="/thread/#{publink}").publish-btn
                   i.fa.fa-plus
                   span 发布话题
               - if (user.type == 'admin')
