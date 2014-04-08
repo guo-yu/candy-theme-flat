@@ -1,8 +1,5 @@
 extends layout
 
-block css
-  link(rel='stylesheet', href='#{static}/stylesheets/thread.css')
-
 block content
   .board.clearfix
     - if (threads.length <= 0)
@@ -20,12 +17,12 @@ block content
           - var attachements = thread.media && thread.media.length > 0
           .thread.clearfix(class="#{pined ? 'pined' : 'normal'}")
             .row
-              .col-lg-10
+              .col-lg-10.thread-brief.clearfix
                 .avatar
                   a(href="/member/#{thread.lz.id}")
                     img(src="#{thread.lz.avatar}")
                 h4.title
-                  a(href="/thread/#{thread.id}")
+                  a(href="/thread/#{thread.id}").thread-title
                     - if (pined)
                       span.pined-label
                         i.fa.fa-arrow-circle-o-up
