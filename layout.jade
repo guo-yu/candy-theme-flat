@@ -20,7 +20,12 @@ html(ng-app="candy")
     block header
       include header
     block banner
-      include banner
+      #banner.banner.clearfix
+        #banner-inner.banner-inner.clearfix.container
+          .row
+            .col-lg-12
+              h2.title 简而未减，只若初见。
+                span.desc #{site.name} 为你和你的朋友们营造一个简洁，优雅的社区。你可以参与讨论节点的帖子、活动，或者关注你所感兴趣的话题。
     #content.content
       #content-inner.content-inner.container.clearfix
         .row
@@ -31,11 +36,7 @@ html(ng-app="candy")
               block sidebar
                 include sidebar
     block footer
-      #footer.footer
-        #footer-inner.footer-inner.container.clearfix.copyright &copy; #{new Date().getFullYear()} #{site.name} #{site.desc}. 
-          .poweredby.pull-right Powered by 
-            a(href="https://github.com/turingou/candy",title="npm install candy").candy #{sys.name} 
-            |v#{sys.version}
+      include footer
 
     //- libs
     script(src="#{static}/javascripts/lib/jquery-1.10.2.min.js")

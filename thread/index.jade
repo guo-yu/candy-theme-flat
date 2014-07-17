@@ -38,7 +38,7 @@ block content
             - if (thread.media && thread.media.length > 0)
               .attachements
                 - each file in thread.media
-                  - var realSize = file.size || file.meta.size;
+                  - var realSize = file.size || (file.meta ? file.meta.size : 0)
                   - var size = (realSize / 1024 / 1024).toString().substr(0,4)
                   .attachement.clearfix
                     - if (file.type == 'image/jpeg' || file.type == 'image/png' || file.type == 'image/gif')

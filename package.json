@@ -1,19 +1,19 @@
 {
   "name": "candy-theme-flat",
-  "version": "0.0.5",
-  "view engine": "jade",
+  "version": "0.1.0",
   "static": "./static",
+  "view engine": "jade",
   "description": "the default theme of candy",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/turingou/candy-theme-flat.git"
   },
   "keywords": [
     "candy",
-    "theme"
+    "theme",
+    "bbs",
+    "flat",
+    "forum"
   ],
   "author": "turing <o.u.turing@gmail.com>",
   "license": "MIT",
