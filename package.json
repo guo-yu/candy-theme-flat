@@ -1,6 +1,6 @@
 {
   "name": "candy-theme-flat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "static": "./static",
   "view engine": "jade",
   "description": "the default theme of candy",

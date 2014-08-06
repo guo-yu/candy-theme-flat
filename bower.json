@@ -1,0 +1,23 @@
+{
+  "name": "candy-theme-flat",
+  "version": "0.1.0",
+  "homepage": "https://github.com/turingou/candy-theme-flat",
+  "authors": [
+    "turing <o.u.turing@gmail.com>"
+  ],
+  "description": "the default theme of Candy",
+  "keywords": [
+    "candy",
+    "theme",
+    "candy-theme",
+    "candy-theme-flat"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,27 +1,26 @@
 ## candy-theme-flat ![npm](https://badge.fury.io/js/candy-theme-flat.png)
 
-the default theme of candy and a very first demo of Project [Theme](http://github.com/turingou/theme)
+社会化论坛项目 [Candy](http://github.com/turingou/candy) 的默认主题
 
-### Installation
+### Installation 安装
+
+Candy 默认依赖 `candy-theme-flat` 项目，因此，并不需要手动安装。如果在某些情况下需要手动安装，可以在 Candy 的工作路径执行下列代码：
 
 ```
 $ npm install candy-theme-flat
 ```
 
-### Example
+### Example 范例代码
+这段代码演示如何使用 `theme` 模块在您的项目中加载 `candy-theme-flat` 并使用其中的视图模板来渲染页面，如果需要更深入的文档，建议查看 [Theme](http://github.com/turingou/theme) 模块的相关 wiki.
+
 ````javascript
-// ensure candy-theme-flat was installed successfully.
-// then import theme module.
 var Theme = require('theme');
-var themes = new Theme;
+var themes = new Theme(__dirname);
 
 app.get('/home?theme=candy-theme-flat', function(req, res, next){
-    res.send(theme.render('candy-theme-flat/home', {...}));
+  res.send(theme.render('candy-theme-flat/home', {...}));
 });
 ````
-
-### API
-check this file: `index.js`
 
 ### Contributing
 - Fork this repo
